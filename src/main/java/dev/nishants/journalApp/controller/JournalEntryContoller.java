@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 @RestController
 @RequestMapping("/journal")
 public class JournalEntryContoller {
-  private Map<Long, JournalEntry> journalEntries = new HashMap<>();
+  private final Map<Long, JournalEntry> journalEntries = new HashMap<>();
 
   @GetMapping
   public List<JournalEntry> getAll() {
